@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+#hero .btn {
+    background: #ff6347;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#about {
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 2rem;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list i {
+    margin-right: 0.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea, form button {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background: #ff6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer .social-links {
+    margin-top: 1rem;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        margin: 0 0 1rem 0;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my work and projects</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+    </section>
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself.</p>
+    </section>
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="project1.jpg" alt="Project 1">
+            <div class="project-info">
+                <h3>Project Title</h3>
+                <p>Project description goes here.</p>
+            </div>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><i class="fab fa-html5"></i> HTML</li>
+            <li><i class="fab fa-css3-alt"></i> CSS</li>
+            <li><i class="fab fa-js-square"></i> JavaScript</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Basic form validation example
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Form submitted!');
+});
+
+    </script>
+</body>
+</html>
